@@ -35,12 +35,13 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
+            const prNumber = context.payload.pull_request.number;
             github.rest.issues.createComment({
-              issue_number: context.issues.number,
+              issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: 'Cloudformation test stack deployed. Stack name: pr-test-stack-${{github.event.pull_request.number}}'
-            })
+              body: `Cloudformation test stack deployed. Stack name: pr-test-stack-${prNumber}`
+            });
 
   cleanup-on-merge:
     runs-on: ubuntu-latest
