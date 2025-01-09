@@ -14,9 +14,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Set Up Python # setups our python env
-          uses: actions/setup-python@v2
-          with:
-            python-version: '3.12'
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.12'
 
       - name: Install Dependencies # Installs any packages
           run:
