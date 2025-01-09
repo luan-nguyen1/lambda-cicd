@@ -3,5 +3,5 @@ import json
 def lambda_handler(event, context):
     return {
         'statusCode': 200,
-        'body': json.dumps('Test updated Lambda function from GitHub Actions')
+        'body': json.dumps('Test updated Lambda function')
     }
