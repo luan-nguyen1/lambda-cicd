@@ -20,7 +20,7 @@ Resources:
         - Key: Environment
           Value: !Ref Environment
         - Key: Environment
-          Value: TEST
+          Value: MAKIMA
 
 Outputs:
   BucketName:
