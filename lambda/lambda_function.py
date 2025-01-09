@@ -1,7 +1,7 @@
 import json
 
-def lambda_handler(event,context):
-    return{
+def lambda_handler(event, context):
+    return {
         'statusCode': 200,
-        'body': json.dumps('Hello updated Lambda from Visual Studio Code')
+        'body': json.dumps('Test updated Lambda function from GitHub Actions')
     }
